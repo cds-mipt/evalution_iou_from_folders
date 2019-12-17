@@ -86,8 +86,11 @@ def get_iou_metric(classes,
     return iou, miou
 
 if __name__ == "__main__":
-
+    #just for winter city 
     classes, palette = get_classes_palette()
+    #for another dataset:
+    # classes = {0: background, 1: building, }
+    # palette = {(0, 0, 0):0, (125, 0, 125):1, }
     
     true_label_dir = '/home/adeshkin/projects/datasets/Winter_City/augmented_multiclass_dataset/test/mask'
     predicted_label_dir = '/home/adeshkin/projects/datasets/results_unet_mct_softmax_test_sample'
