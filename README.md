@@ -9,7 +9,7 @@ Example:
              (125, 0, 125):1,
              (255, 0, 0):2}
 
-2. To enter path to images in get_iou_metric.py: L.95-96
+2. To enter path to masks in get_iou_metric.py: L.95-96
 3. To run:
 python get_iou_metric.py 
 ```
