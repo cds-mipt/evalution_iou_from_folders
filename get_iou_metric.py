@@ -94,14 +94,8 @@ if __name__ == "__main__":
     
     true_label_dir = '/home/adeshkin/projects/datasets/Winter_City/augmented_multiclass_dataset/test/mask'
     predicted_label_dir = '/home/adeshkin/projects/datasets/results_unet_mct_softmax_test_sample'
-    true_convert = './t_folder'
-    predicted_convert = './p_folder'
-    batch_size = 16
     
     get_iou_metric(classes, 
                    palette, 
                    true_label_dir,
-                   predicted_label_dir,
-                   true_convert, 
-                   predicted_convert,
-                   batch_size)
+                   predicted_label_dir)
