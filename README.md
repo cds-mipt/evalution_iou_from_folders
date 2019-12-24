@@ -21,5 +21,5 @@ Example:
 
 3. To run the evalution, just type:
 ```
-        python get_iou_metric.py 
+python get_iou_metric.py 
 ```
