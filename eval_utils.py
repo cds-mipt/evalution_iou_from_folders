@@ -1,26 +1,5 @@
 import torch
-from PIL import Image
 import numpy as np
-import os
-
-class LabelDataset(torch.utils.data.Dataset):
-
-    def __init__(self, label_root_dir):
-        super(LabelDataset, self).__init__()
-        
-        self.label_root_dir = label_root_dir
-        self.mask_paths = os.listdir(label_root_dir)
-        self.mask_paths.sort()
-
-    def __len__(self):
-        return len(self.mask_paths)
-
-    def __getitem__(self, index):
-        mask_path = os.path.join(self.label_root_dir, self.mask_paths[index])
-        label_img = Image.open(mask_path)
-        label_img = torch.LongTensor(np.array(label_img).astype(np.int64))
-
-        return label_img
 
 class AverageMeter(object):
     """Computes and stores the average and current value"""
